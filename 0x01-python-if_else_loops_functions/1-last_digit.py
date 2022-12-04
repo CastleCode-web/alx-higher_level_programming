@@ -6,7 +6,7 @@ if (number < 0):
 	last_digit = number % 10
 	number = -number
 	last_digit = -last_digit
-elif (number > 0):
+else:
 	last_digit = number % 10
 if (last_digit > 5):
 	print('Last digit of', number, 'is', last_digit, 'and is greater than 5')
