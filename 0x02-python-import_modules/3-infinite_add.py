@@ -1,17 +1,15 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from sys import argv
+    import sys
 
-    sum = 0
-
-    if len(argv) == 1:
-        sum = 0
-
-    elif len(argv) == 2:
-        sum += int(argv[1])
-
-    elif len(argv) > 2:
-        for i in range(1, len(argv)):
-            sum += int(argv[i])
-
-    print(sum)
+    a = len(sys.argv) - 1
+    sum_arg = 0
+    if a == 0:
+        sum_arg += a
+    elif a >= 1:
+        for index, arg in enumerate(sys.argv):
+            b = sys.argv[0]
+            if arg == b:
+                continue
+            sum_arg += int(arg)
+    print(sum_arg)
