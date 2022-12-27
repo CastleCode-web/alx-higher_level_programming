@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+'''#!/usr/bin/python3
 def list_division(my_list_1, my_list_2, list_length):
     output_list = []
     count = 0
@@ -17,4 +17,26 @@ def list_division(my_list_1, my_list_2, list_length):
         finally:
             output_list.append(result)
         count += 1
-    return output_list
+    return output_list'''
+#MyCode
+#!/usr/bin/python3
+def list_division(my_list_1, my_list_2, list_length):
+    new_list = []
+    for index in range(list_length):
+        try:
+        '''for index in range(list_length):
+        The for is outside try block because I want to loop through the value one by one'''
+            a = my_list_1[index] / my_list_2[index]
+        except ZeroDivisionError:
+            a = 0
+            print('division by zero')
+        except TypeError:
+            a = 0
+            print('wrong type')
+        except IndexError:
+            a = 0
+            print('out of range')
+        finally:
+            new_list.append(a)
+    return new_list
+
