@@ -1,0 +1,46 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name('Ca', 'Stle')
+My name is Ca Stle
+>>> say_my_name("Feyi", "Sara")
+My name is Feyi Sara
+>>> say_my_name("Feyi", Sara)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'Sara' is not defined
+>>> say_my_name("Feyi", 34)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/alx-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 14, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+>>> say_my_name(26, 34)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/alx-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 12, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+>>> say_my_name('2', 34)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/alx-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 14, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+>>> say_my_name('2', [3,4])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/alx-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 14, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+>>> say_my_name('2', True)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/alx-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 14, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+>>> say_my_name(2.6, True)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/alx-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 12, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+
