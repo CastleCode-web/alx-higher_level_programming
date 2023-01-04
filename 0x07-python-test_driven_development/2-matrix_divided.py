@@ -4,9 +4,11 @@ This module contains a function that divides all elements
 of a matrix. Each element must be an absolute int or float
 and the divisor must be a number but not 0
 '''
+
+
 def matrix_divided(matrix, div):
     '''
-    matrix_divided is a function that divides all element of a matrix and 
+    matrix_divided is a function that divides all element of a matrix and
     returns a new list without altering the old
     '''
     checkfor_matrix = all(isinstance(element, list) for element in matrix)

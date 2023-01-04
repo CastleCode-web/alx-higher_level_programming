@@ -3,6 +3,8 @@
 This module contains a function that
 prints new lines after . ? and : characters
 '''
+
+
 def text_indentation(text):
     '''
     text_indentation is a function that accepts
@@ -11,9 +13,10 @@ def text_indentation(text):
     '''
     if not type(text) is str:
         raise TypeError("text must be a string")
+    var = ''
     for i in text:
+        var += i
         if i == '.' or i == '?' or i == ':':
-            print(i)
+            print(var.strip())
             print()
-        else:
-            print("{}".format(i), end="")
+            var = ''

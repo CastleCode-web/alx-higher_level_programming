@@ -3,6 +3,8 @@
 This module contains a afunction that
 prints string characters to stdout
 '''
+
+
 def say_my_name(first_name, last_name=""):
     '''
     say_my_name is a function that prints the first and

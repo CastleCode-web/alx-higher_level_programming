@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 ''''
-This module contains a function that 
+This module contains a function that
 prints a square with the # character
 '''
+
+
 def print_square(size):
     '''
     print_square function accepts one argument
