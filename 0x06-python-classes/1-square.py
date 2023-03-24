@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Create a square class with a size value"""
+
+
 class Square:
     """
         This class create a square with private value size
