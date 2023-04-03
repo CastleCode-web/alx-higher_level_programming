@@ -11,7 +11,7 @@ def say_my_name(first_name, last_name=""):
     last names of users in string format
     '''
     if not type(first_name) is str:
-        raise TypeError("{} must be a string".format(first_name))
+        raise TypeError("first_name must be a string")
     if not type(last_name) is str:
-        raise TypeError("{} must be a string".format(last_name))
+        raise TypeError("last_name must be a string")
     print("My name is {:s} {:s}".format(first_name, last_name))
