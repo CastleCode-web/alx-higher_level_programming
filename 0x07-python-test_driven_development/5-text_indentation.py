@@ -20,3 +20,4 @@ def text_indentation(text):
             print(var.strip())
             print()
             var = ''
+    print(var.strip(), end='')
