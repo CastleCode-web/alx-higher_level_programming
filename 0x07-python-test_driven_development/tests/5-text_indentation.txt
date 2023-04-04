@@ -1,5 +1,5 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
->>> text_indentation('My name? Is. Feyisara:')
+>>> text_indentation('My name?Is. Feyisara:')
 My name?
 <BLANKLINE>
 Is.
@@ -55,3 +55,33 @@ Utrum igitur tibi litteram videor an totas paginas commovere?
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> text_indentation('My name: is? Feyisara')
+My name:
+<BLANKLINE>
+is?
+<BLANKLINE>
+>>> text_indentation('My name: is? Feyisara.')
+My name:
+<BLANKLINE>
+is?
+<BLANKLINE>
+Feyisara.
+<BLANKLINE>
+>>> text_indentation('My name:')
+My name:
+<BLANKLINE>
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<BLANKLINE>
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utrum igitur tibi litteram videor an totas paginas commovere?")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<BLANKLINE>
+Utrum igitur tibi litteram videor an totas paginas commovere?
+<BLANKLINE>
+>>> text_indentation("Lorem ipsum dolor sit amet?, consectetur: adipiscing elit.")
+Lorem ipsum dolor sit amet?
+<BLANKLINE>
+, consectetur:
+<BLANKLINE>
+adipiscing elit.
+<BLANKLINE>
