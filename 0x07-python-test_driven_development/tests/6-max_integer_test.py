@@ -23,6 +23,9 @@ class TestMaxInteger(unittest.TestCase):
         self.assertIn(5, some_list)
         self.assertNotIn(2, some_list)
         self.assertNotIn('a', some_list)
+        self.assertEqual(max_integer([]), None)
+        self.assertEqual(max_integer(()), None)
+        self.assertEqual(max_integer({}), None)
 
         with self.assertRaises(TypeError):
             max_integer([None, True])
