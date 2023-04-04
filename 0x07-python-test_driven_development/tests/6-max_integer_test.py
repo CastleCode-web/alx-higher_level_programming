@@ -26,6 +26,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer(()), None)
         self.assertEqual(max_integer({}), None)
+        self.assertEqual(max_integer([1]), 1)
 
         with self.assertRaises(TypeError):
             max_integer([None, True])
