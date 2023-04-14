@@ -78,3 +78,57 @@ def matrix_mul(m_a, m_b):
                 inner.append(sp)
             result.append(inner)
     return result
+
+"""
+	Another method
+
+	#!/usr/bin/python3
+	#multiplies two matrices
+
+def matrix_mul(m_a, m_b):
+    #multiplies two matrices with certain conditions
+    if not isinstance(m_a, list):
+        raise TypeError("m_a must be a list")
+    if not all(isinstance(m_a, list) for elem in m_a):
+        raise TypeError("m_a must be a list of lists")
+    if m_a == [] or m_a == [[]]:
+        raise ValueError("m_a can't be empty")
+    if len(m_a[0]) < len(m_a):
+        raise TypeError("each row of m_a must be of the same size")
+    if not isinstance(m_b, list):
+        raise TypeError("m_b must be a list")
+    if not all(isinstance(m_b, list) for elem in m_b):
+        raise TypeError("m_b must be a list of lists")
+    if m_b == [] or m_b == [[]]:
+        raise ValueError("m_b can't be empty")
+    if len(m_b[0]) < len(m_b):
+        raise TypeError("each row of m_b must be of the same size")
+    if len(m_a[0]) != len(m_b):
+        raise ValueError("m_a and m_b can't be multiplied")
+    #creates a transpose of m_b
+    new_list = []
+    for i in range(len(m_b)):
+        some_list = []
+        for j in range(len(m_b[i])):
+            x = m_b[j][i]
+            some_list.append(x)
+        new_list.append(some_list)
+    m_b = new_list
+    #multiplies the row of m_a by that of the transposed m_b
+    matrix_mult = []
+    for i in range(len(m_a)):
+        some_list = []
+        for j in range(len(m_b)):
+            d = 0
+            for k in range(len(m_b[i])):
+                if not isinstance(m_a[i][k], int):
+                    raise TypeError("m_a should contain only integers or floats")
+                elif not isinstance(m_b[j][k], int):
+                    raise TypeError("m_b should contain only integers or floats")
+                x = m_a[i][k] * m_b[j][k]
+                d += x
+            some_list.append(d)
+        matrix_mult.append(some_list)
+    return matrix_mult
+"""
+
