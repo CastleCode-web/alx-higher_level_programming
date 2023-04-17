@@ -1,0 +1,100 @@
+# Testcases for BaseGeometry class
+
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+>>> s_base = BaseGeometry()
+
+# test for success cases
+
+>>> s_base.integer_validator("number", 20)
+
+# test for faillure case, passing str as value
+
+>>> s_base.integer_validator("number", '20')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "[...]"
+TypeError: number must be an integer
+>>> s_base.integer_validator("name", "Castle")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "[...]"
+TypeError: name must be an integer
+>>> s_base.integer_validator("address", "Unilorin")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "[...]"
+TypeError: address must be an integer
+
+# test for success case
+
+>>> s_base.integer_validator("position", 3)
+
+# test for failure case, value is a tuple of integers
+
+>>> s_base.integer_validator("position", (2, 3))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "[...]"
+TypeError: position must be an integer
+
+# test for 1 positional argument
+
+>>> s_base.integer_validator("position")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+>>> s_base.integer_validator("position", )
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
+# test for passing non int as value
+
+>>> s_base.integer_validator("position",[] )
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "[...]"
+TypeError: position must be an integer
+>>> s_base.integer_validator("position", None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "[...]"
+TypeError: position must be an integer
+
+# test for failure case with bool
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("Female", True)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "[...]"
+TypeError: Female must be an integer
+>>> bg = BaseGeometry()
+
+# test for area method
+
+>>> bg.area()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "[...]"
+Exception: area() is not implemented
+
+# test for integer <= 0
+
+>>> s_base.integer_validator("position", 0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "[...]"
+ValueError: position must be greater than 0
+>>> s_base.integer_validator("position", -8)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "[...]
+ValueError: position must be greater than 0
+
+# test for no positional argument
+
+>>> s_base.integer_validator()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'

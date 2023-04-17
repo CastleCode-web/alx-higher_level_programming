@@ -1,0 +1,77 @@
+>>> MyList = __import__("1-my_list").MyList
+
+#Test for positive list element
+
+>>> my_list = MyList()
+>>> my_list.append(2)
+>>> my_list.append(8)
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> my_list.append(9)
+>>> print(my_list)
+[2, 8, 1, 2, 9]
+
+# Test for negative list elements
+
+>>> neg_list = MyList()
+>>> neg_list.append(-3)
+>>> neg_list.append(-1)
+>>> neg_list.append(-6)
+>>> neg_list.append(6)
+>>> neg_list.append(5)
+>>> print(neg_list)
+[-3, -1, -6, 6, 5]
+>>> neg_list.print_sorted()
+[-6, -3, -1, 5, 6]
+>>> my_list.print_sorted()
+[1, 2, 2, 8, 9]
+
+# Test for zero elemnts of list
+
+>>> no_arg = MyList()
+>>> print(no_arg)
+[]
+>>> no_arg.print_sorted()
+[]
+
+# Test for single positive element in list
+
+>>> l = MyList()
+>>> l.append(3)
+>>> print(l)
+[3]
+>>> l.print_sorted()
+[3]
+
+# Test for single negative element in list
+
+>>> v = MyList()
+>>> v.append(-4)
+>>> print(v)
+[-4]
+>>> v.print_sorted()
+[-4]
+
+# Test to compare the memory location of instance v and its method
+
+>>> id(v) is not id(v.print_sorted())
+[-4]
+True
+>>> id(v) is id(v.print_sorted())
+[-4]
+False
+
+# Test to check class type
+
+>>> print(type(MyList()))
+<class '1-my_list.MyList'>
+>>> print(issubclass(MyList, object))
+True
+>>> print(issubclass(MyList, list))
+True
+>>> 'print_sorted' in dir(MyList)
+True
+>>> print(isinstance(MyList, object))
+True
+>>> print(isinstance(MyList, list))
+False
