@@ -10,6 +10,6 @@ def append_write(filename="", text=""):
         returns the number of character added. If the file
         doesn't exist, it's created
     """
-    with open(filename, mode ="a", encoding="utf-8") as MyFile:
+    with open(filename, mode="a", encoding="utf-8") as MyFile:
         a_file = MyFile.write(text)
         return a_file
