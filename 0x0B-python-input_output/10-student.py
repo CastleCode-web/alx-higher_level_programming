@@ -12,7 +12,7 @@ class Student(object):
 
     def to_json(self, attrs=None):
         """ retrieves a dictionary representation of student instance """
-        if attrs == None:
+        if attrs is None:
             return self.__dict__
         else:
             attr_dict = {}
