@@ -9,6 +9,7 @@ class Base(object):
         superclass
     """
     __nb_objects = 0
+
     def __init__(self, id=None):
         """ Base class constructor that accept id as the only argument
             and sets it to none
