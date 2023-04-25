@@ -99,4 +99,4 @@ class Rectangle(Base):
         d = self.__y
         e = self.__width
         f = self.__height
-        return f"[{a}] ({b}) {c}/{d} {e}/{f}"
+        return f"[{a}] ({b}) {c}/{d} - {e}/{f}"
