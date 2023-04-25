@@ -80,3 +80,23 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = value
+
+    def area(self):
+        """ returns the area of the rectangle """
+        return self.__width * self.__height
+
+    def display(self):
+        """ prints the rectangle instance with the character # """
+        a = "#" * self.__width
+        for i in range(self.__height):
+            print(a)
+
+    def __str__(self):
+        """ returns the string representation of rectangle """
+        a = type(self).__name__
+        b = self.id
+        c = self.__x
+        d = self.__y
+        e = self.__width
+        f = self.__height
+        return f"[{a}] ({b}) {c}/{d} {e}/{f}"
